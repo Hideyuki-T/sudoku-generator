@@ -28,7 +28,7 @@ void printBoard(const Board &board) {
 //空白の場所を探す。
 bool findEmptyLocation(const Board &board, int &row, int &col) {
     for (int i = 0; i < 9; i++) {
-        for(int j = 0; j < 0; j++) {
+        for(int j = 0; j < 9; j++) {
             if (board[i][j] == 0) {
                 row = i;
                 col = j;
@@ -93,7 +93,7 @@ Board generateCompleteBoard() {
     if (solve(board))
         return board;
     else
-        throw runtime_error("盤面出来んかったわ(｡•́ᴗ•̀｡)ｺﾞﾒﾝﾈ...")
+        throw runtime_error("盤面出来んかったわ(｡•́ᴗ•̀｡)ｺﾞﾒﾝﾈ...");
 }
 //パズル盤作成₍ ᐢ⸝⸝•ᴗ•⸝⸝ᐢ ₎
 Board removeNumbers(const Board &board, int removals) {
@@ -105,7 +105,7 @@ Board removeNumbers(const Board &board, int removals) {
         uniform_int_distribution<> dis(0, 8);
         int row = dis(gen);
         int col = dis(gen);
-        if (puzzle[row][col] != 0)　{
+        if (puzzle[row][col] != 0) {
             puzzle[row][col] = 0;
             count--;
         }
