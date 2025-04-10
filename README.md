@@ -18,3 +18,12 @@ sudoku-generator/
 │   └── main.rb           # Ruby実装
 └── README.md             # 優雅なる総合案内書
 ```
+
+# 使い方
+- pythonコマンド
+
+python3 main.py
+
+- javaコマンド
+
+java Main
