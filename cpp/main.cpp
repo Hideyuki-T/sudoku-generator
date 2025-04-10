@@ -38,3 +38,26 @@ bool findEmptyLocation(const Board &board, int &row, int &col) {
     }
     return false;
 }
+//ルールをチェックする。
+bool isValid(const Board &board, int row, int col, int num) {
+    //行
+    for (int j = 0; j < 9; j++) {
+        if (board[row][j] == num)
+            return false;
+    }
+    //列
+    for (int i = 0; i < 9; i++) {
+        if (board[col][i] == num)
+            return false;
+    }
+    //ボックスチェック
+    int boxRow = row - row % 3;
+    int boxCol = col - col % 3;
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (board[boxRow + i][boxCol + j] == num)
+                return false;
+        }
+    }
+    return true;
+}
