@@ -25,3 +25,16 @@ void printBoard(const Board &board) {
         cout << "\n";
     }
 }
+//空白の場所を探す。
+bool findEmptyLocation(const Board &board, int &row, int &col) {
+    for (int i = 0; i < 9; i++) {
+        for(int j = 0; j < 0; j++) {
+            if (board[i][j] == 0) {
+                row = i;
+                col = j;
+                return true;
+            }
+        }
+    }
+    return false;
+}
