@@ -112,3 +112,19 @@ Board removeNumbers(const Board &board, int removals) {
     }
     return puzzle;
 }
+//結合テスト
+int main() {
+    try {
+        Board completeBoard = generateCompleteBoard();
+        cout << "完全盤ができましたよ₍ᐡ⸝⸝•𖥦•⸝⸝ᐡ₎:\n";
+        printBoard(completeBoard);
+
+        Board puzzleBoard = removeNumbers(completeBoard, 40);
+        cout << "\n生成したパズル盤だよ(՞っ ̫ _՞)♡:\n";
+        printBoard(puzzleBoard);
+    } catch (const exception &e) {
+        cerr << "エラ〜: " << e.what() << "\n";
+        return 1;
+    }
+    return 0;
+}
