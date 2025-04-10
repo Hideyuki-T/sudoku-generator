@@ -71,5 +71,18 @@ bool solve(Board &board) {
     for (int num = 1; num <= 9; num++) {
         numbers.push_back(num);
     }
+    //乱数処理
+    //C++11以降の乱数ライブラリを利用して数字の順序をランダム化。
+    unsigned seed = chrono::system_clock::now().time_since_epoch().count();
+    shuffle(numbers.begin(), numbers.end(), default_random_engine(seed));
 
+    for (int num : numbers) {
+        if (isValid(board, row, col, num)) {
+            board[row][col] = num;
+            if (solve(board))
+                return true;
+            board[row][col] = 0; //<-バックトラッキング
+        }
+    }
+    return false;
 }
