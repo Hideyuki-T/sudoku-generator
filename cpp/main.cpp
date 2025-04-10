@@ -86,3 +86,12 @@ bool solve(Board &board) {
     }
     return false;
 }
+
+//完全盤生成ユーティリティ
+Board generateCompleteBoard() {
+    Board board = createBoard();
+    if (solve(board))
+        return board;
+    else
+        throw runtime_error("盤面出来んかったわ(｡•́ᴗ•̀｡)ｺﾞﾒﾝﾈ...")
+}
