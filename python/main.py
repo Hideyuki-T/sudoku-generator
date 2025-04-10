@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import random
+import copy
 
 def create_board():
     """
@@ -76,10 +77,28 @@ def generate_complete_board():
     else:
         raise Exception("盤面の生成に失敗してしまった。。")
 
+def remove_numbers(board, removals=40):
+    """
+    盤面完全体からランダムに空を作成し、ゲーム化する
+    """
+    puzzle_board = copy.deepcopy(board)
+    count = removals
+    while count > 0:
+        row = random.randint(0, 8)
+        col = random.randint(0, 8)
+        if puzzle_board[row][col] != 0:
+            puzzle_board[row][col] = 0
+            count -= 1
+    return puzzle_board
+
 def main():
-    board = generate_complete_board()
+    complete_board = generate_complete_board()
+    puzzle_board = remove_numbers(complete_board, removals=40)
+    # board = generate_complete_board()
+    print("正解盤")
+    print_board(complete_board)
     print("[さぁ、解いてみて！]")
-    print_board(board)
+    print_board(puzzle_board)
 
 if __name__ == "__main__":
     main()
