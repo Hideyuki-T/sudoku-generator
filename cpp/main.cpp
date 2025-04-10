@@ -15,3 +15,13 @@ typedef vector<vector<int>> Board;
 Board createBoard() {
     return Board(9, vector<int>(9,0));
 }
+
+//盤面表示機能
+void printBoard(const Board &board) {
+    for (const auto &row : board) {
+        for (int num : row) {
+            cout << (num == 0 ? ". " : to_string(num) + ". ");
+        }
+        cout << "\n";
+    }
+}
