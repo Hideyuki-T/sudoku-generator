@@ -16,7 +16,7 @@ def print_board(board):
 
 def main():
     board = create_board()
-    print("初期化された数独のばん面：")
+    print("初期化された数独の盤面：")
     print_board(board)
 
 if __name__ == "__main__":
