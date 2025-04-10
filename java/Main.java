@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args){
     //完全盤作成
-    int[][] completeBoard = genelateCompleteBoard();
+    int[][] completeBoard = generateCompleteBoard();
     System.out.println("完全盤だよ！");
     printBoard(completeBoard);
     //パズル盤にするために４０セルを削除
@@ -38,7 +38,7 @@ public class Main {
     }
     //空白を探す。なければnull。
     public static int[] findEmptyLocation(int[][] board) {
-        for (int i = o; i < 9; i++){
+        for (int i = 0; i < 9; i++){
             for (int j = 0; j < 9; j++) {
                 if (board[i][j] == 0) {
                     return new int[] { i, j };
@@ -50,7 +50,7 @@ public class Main {
     //ルールに違反しないかチェックする。
     public static boolean isValid(int[][] board, int row, int col, int num) {
         //行をチェック
-        for (int j = 0; j < 9, j++){
+        for (int j = 0; j < 9; j++){
             if (board[row][j] == num) {
             return false;
             }
@@ -80,13 +80,13 @@ public class Main {
             return true;
         }
         int row = empty[0], col = empty[1];
+
         //1~9をランダムに試してみて、盤生成を多様化してみる。
-        List<Integer> Numbers = new ArrayList<>();
+        List<Integer> numbers = new ArrayList<>();
         for (int num = 1; num <= 9; num++) {
-            Numbers.add(num);
+            numbers.add(num);
         }
         Collections.shuffle(numbers);
-
         for (int num : numbers) {
             if (isValid(board, row, col, num)) {
                 board[row][col] = num;
@@ -104,7 +104,7 @@ public class Main {
         if (solve(board)) {
             return board;
         } else {
-            throw new RuntimeException("生成に失敗したわ。(人д｀o)ｺﾞﾒﾝﾈ")
+            throw new RuntimeException("生成に失敗したわ。(人д｀o)ｺﾞﾒﾝﾈ");
         }
     }
     //完全盤からランダムで削除してパズルにする。
@@ -117,6 +117,7 @@ public class Main {
             int col = rand.nextInt(9);
             if (puzzle[row][col] != 0) {
                 puzzle[row][col] = 0;
+                count--;
             }
         }
         return puzzle;
