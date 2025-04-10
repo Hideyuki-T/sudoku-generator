@@ -61,3 +61,15 @@ bool isValid(const Board &board, int row, int col, int num) {
     }
     return true;
 }
+
+//完全盤生成
+bool solve(Board &board) {
+    int row, col;
+    if (!findEmptyLocation(board, row, col))
+        return true; //<-全てのセルが埋まれば終わり。。
+    vector<int> numbers;
+    for (int num = 1; num <= 9; num++) {
+        numbers.push_back(num);
+    }
+
+}
