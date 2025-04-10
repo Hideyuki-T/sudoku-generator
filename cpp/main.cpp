@@ -95,3 +95,20 @@ Board generateCompleteBoard() {
     else
         throw runtime_error("盤面出来んかったわ(｡•́ᴗ•̀｡)ｺﾞﾒﾝﾈ...")
 }
+//パズル盤作成₍ ᐢ⸝⸝•ᴗ•⸝⸝ᐢ ₎
+Board removeNumbers(const Board &board, int removals) {
+    Board puzzle = board;
+    random_device rd;
+    mt19937 gen(rd());
+    int count = removals;
+    while (count > 0) {
+        uniform_int_distribution<> dis(0, 8);
+        int row = dis(gen);
+        int col = dis(gen);
+        if (puzzle[row][col] != 0)　{
+            puzzle[row][col] = 0;
+            count--;
+        }
+    }
+    return puzzle;
+}
