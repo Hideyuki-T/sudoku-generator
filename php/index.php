@@ -11,3 +11,11 @@ function createBoard() {
     }
     return $board;
 }
+//盤表示する！
+function printBoard($board) {
+    foreach ($board as $row) {
+        echo implode(" ", array_map(function($num) {
+            return ($num === 0 ? "." : $num);
+        }, $row)) . "\n";
+    }
+}

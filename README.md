@@ -35,6 +35,6 @@ sudoku-generator/
 | C++        | g++ -std=c++11 -o sudoku main.cpp |
 |            | ./sudoku                          |
 | JavaScript | node main.js                      |
-| PHP        |                                   |
+| PHP        | php index.php                     |
 | Ruby       |                                   |
 
