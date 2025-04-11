@@ -10,3 +10,12 @@ def print_board(board)
     end
 end
 
+//空セル検出
+def find_empty(board)
+    board.each_with_index do |row, i|
+      row.each_with_index do |num, j|
+        return [i, j] if num == 0
+      end
+    end
+    nil
+end
