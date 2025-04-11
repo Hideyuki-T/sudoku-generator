@@ -28,8 +28,8 @@ def valid?(board, row, col, num)
 
     start_row = row - row % 3
     start_col = col - col % 3
-    (start_row...(start_row + 3)).echo do |i|
-        (start_col...(start_col + 3)).echo do |j|
+    (start_row...(start_row + 3)).each do |i|
+        (start_col...(start_col + 3)).each do |j|
             return false if board[i][j] == num
         end
     end
@@ -44,10 +44,10 @@ def solve!(board)
     row, col = empty
 
 # ランダムに試す
-    nums = (1..9).to_s.shuffle
+    nums = (1..9).to_a.shuffle
     nums.each do |num|
         if valid?(board, row, col, num)
-            board[row][col] = mun
+            board[row][col] = num
             return true if solve!(board)
             board[row][col] = 0
         end
@@ -59,7 +59,7 @@ end
 # 完全盤生成ユーティリティ
 def generate_complete_board
     board = create_board
-    raise "盤の生成失敗です。。。"　unless solve!(board)
+    raise "盤の生成失敗です。。。" unless solve!(board)
     board
 end
 
