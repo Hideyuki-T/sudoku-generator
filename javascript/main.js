@@ -31,7 +31,7 @@ function isValid(board, row, col, num) {
         }
     }
     for (let i = 0; i < 9; i++) {
-        if (board[col][i] === num) {
+        if (board[i][col] === num) {
             return false;
         }
     }
@@ -59,7 +59,7 @@ function solve(board) {
     numbers.sort(() => Math.random() - 0.5); //シャッフル
 
     for (let num of numbers) {
-        if (isValid(board, rol, col, num)) {
+        if (isValid(board, row, col, num)) {
             board[row][col] = num;
             if (solve(board)) {
                 return true;

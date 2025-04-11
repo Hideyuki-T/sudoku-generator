@@ -34,6 +34,7 @@ sudoku-generator/
 | Java       | java Main                         |
 | C++        | g++ -std=c++11 -o sudoku main.cpp |
 |            | ./sudoku                          |
-| JavaScript |                                   |
+| JavaScript | node main.js                      |
 | PHP        |                                   |
 | Ruby       |                                   |
+
