@@ -4,7 +4,7 @@ function createBoard() {
     $board = array();
     for ($i = 0; $i < 9; $i++) {
         $row = array();
-        for ($j = 0; j < 9; $j++) {
+        for ($j = 0; $j < 9; $j++) {
             $row[] = 0;
         }
         $board[] = $row;
@@ -21,7 +21,7 @@ function printBoard($board) {
 }
 
 //空セルの座標を返す。
-function findEmptyLocation($board, $row, $col) {
+function findEmptyLocation($board, &$row, &$col) {
     for ($i = 0; $i < 9; $i++) {
         for ($j = 0; $j < 9; $j++) {
             if ($board[$i][$j] === 0) {
@@ -105,3 +105,22 @@ function removeNumbers($board, $removals) {
     }
     return $puzzleBoard;
 }
+
+//結合テスト
+function main() {
+    try {
+        $completeBoard = generateCompleteBoard();
+        echo "正解だよ！₍ᐡ⸝⸝•𖥦•⸝⸝ᐡ₎:\n";
+        printBoard($completeBoard);
+
+        $puzzleBoard = removeNumbers($completeBoard, 40);
+        echo "\nさぁ、解いてみて！:\n";
+        printBoard($puzzleBoard);
+    }   catch (Exception $e) {
+        echo "エラ〜〜♪: " . $e->getMessage() . "\n";
+    }
+}
+
+main();
+
+?>
