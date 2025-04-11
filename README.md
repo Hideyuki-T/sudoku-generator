@@ -1,5 +1,5 @@
 # 概要：
-6つの言語で挑戦！Python から Ruby まで、数独ジェネレーターを実装する！
+6つの言語で挑戦！Python から Ruby まで、数独ジェネレーターを実装！
 
 # 使用技術
 ![python Badge](https://img.shields.io/badge/-Python-%230000.svg?style=flat&logo=python)
@@ -11,6 +11,10 @@
 
 ![git Badge](https://img.shields.io/badge/-Git-%230000.svg?style=flat&logo=git)
 ![github Badge](https://img.shields.io/badge/-GitHub-%230000.svg?style=flat&logo=github)
+
+![Last Commit](https://img.shields.io/github/last-commit/Hideyuki-T/sudoku-generator.svg)
+
+
 
 # ディレクトリ構成:
 ```
@@ -56,4 +60,3 @@ git clone https://github.com/Hideyuki-T/sudoku-generator.git
 ## 今後の展望
 - ユーザーインターフェースの拡充
 - 他言語での実装
-- 
