@@ -35,3 +35,22 @@ def valid?(board, row, col, num)
     end
     true
 end
+
+//完全盤生成
+def solve!(board)
+    empty = find_empty(board)
+    return true unless empty
+
+    row, col = empty
+
+    //ランダムに試す
+    nums = (1..9).to_s.shuffle
+    nums.each do |num|
+        if valid?(board, row, col, num)
+            board[row][col] = mun
+            return true if solve!(board)
+            board[row][col] = 0
+        end
+    end
+    false
+end
