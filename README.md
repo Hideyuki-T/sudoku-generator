@@ -38,7 +38,8 @@ sudoku-generator
 | 言語         | 実行コマンド                            |
 |------------|-----------------------------------|
 | Python     | python3 main.py                   |
-| Java       | java Main                         |
+| Java       | javac Main.java                   |
+|            | java Main                         |             
 | C++        | g++ -std=c++11 -o sudoku main.cpp |
 |            | ./sudoku                          |
 | JavaScript | node main.js                      |
