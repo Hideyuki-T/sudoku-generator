@@ -1,6 +1,15 @@
 # 概要：
 6つの言語で挑戦！Python から Ruby まで、数独ジェネレーターを実装する！
 
+# 使用技術
+![python Badge](https://img.shields.io/badge/-Python-%230000.svg?style=flat&logo=python)
+![java Badge](https://img.shields.io/badge/-Java-%230000.svg?style=flat&logo=java)
+![c++ Badge](https://img.shields.io/badge/-C++-%230000.svg?style=flat&logo=c++)
+![javascript Badge](https://img.shields.io/badge/-JavaScript-%230000.svg?style=flat&logo=javascript)
+![php Badge](https://img.shields.io/badge/-PHP-%230000.svg?style=flat&logo=php)
+![ruby Badge](https://img.shields.io/badge/-Ruby-%230000.svg?style=flat&logo=ruby)
+
+
 # ディレクトリ構成:
 ```
 sudoku-generator/
