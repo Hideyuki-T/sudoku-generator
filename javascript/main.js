@@ -22,3 +22,27 @@ function findEmptyLocation(board) {
     }
     return null;
 }
+
+//ルールチェック
+function isValid(board, row, col, num) {
+    for (let j =0; j < 9; j++) {
+        if (board[row][j] === num) {
+            return false;
+        }
+    }
+    for (let i = 0; i < 9; i++) {
+        if (board[col][i] === num) {
+            return false;
+        }
+    }
+    let startRow = row - (row % 3);
+    let startCol = col - (col % 3);
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+            if (board[startRow + i][startCol + j] === num) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
