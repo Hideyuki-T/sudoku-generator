@@ -78,3 +78,13 @@ function solve(&$board) {
     }
     return false;
 }
+
+//完全盤生成ユーティリティ
+function generateCompleteBoard() {
+    $board = createBoard();
+    if (solve($board)) {
+        return $board;
+    } else {
+        throw new Exception("盤面生成失敗なり。。ᐡ߹_߹ᐡ");
+    }
+}
