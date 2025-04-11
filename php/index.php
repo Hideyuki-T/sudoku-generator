@@ -33,3 +33,27 @@ function findEmptyLocation($board, $row, $col) {
     }
     return false;
 }
+
+//ルールチェック
+function isValid($board, $row, $col, $num) {
+    for ($j = 0; $j < 9; $j++) {
+        if ($board[$row][$j] == $num) {
+            return false;
+        }
+    }
+    for ($i = 0; $i < 9; $i++) {
+        if ($board[$i][$col] == $num) {
+            return false;
+        }
+    }
+    $startRow = $row -($row % 3);
+    $startCol = $col -($col % 3);
+    for ($i = 0; $i < 3; $i++) {
+        for ($j = 0; $j < 3; $j++) {
+            if ($board[$startRow + $i][$startCol + $j] == $num) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
