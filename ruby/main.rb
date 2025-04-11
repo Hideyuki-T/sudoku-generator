@@ -19,3 +19,19 @@ def find_empty(board)
     end
     nil
 end
+
+//ルールチェック
+def valid?(board, row, col, num)
+
+    return false if board[row].include?(num)
+    return false if board.any? { |r| r[col] == num }
+
+    start_row = row - row % 3
+    start_col = col - col % 3
+    (start_row...(start_row + 3)).echo do |i|
+        (start_col...(start_col + 3)).echo do |j|
+            return false if board[i][j] == num
+        end
+    end
+    true
+end
