@@ -9,22 +9,29 @@
 ![php Badge](https://img.shields.io/badge/-PHP-%230000.svg?style=flat&logo=php)
 ![ruby Badge](https://img.shields.io/badge/-Ruby-%230000.svg?style=flat&logo=ruby)
 
+![git Badge](https://img.shields.io/badge/-Git-%230000.svg?style=flat&logo=git)
+![github Badge](https://img.shields.io/badge/-GitHub-%230000.svg?style=flat&logo=github)
+
 # ディレクトリ構成:
 ```
-sudoku-generator/
-├── python/
-│   └── main.py           # Python実装
-├── java/
-│   └── Main.java         # Java実装
-├── cpp/
-│   └── main.cpp          # C++実装
-├── javascript/
-│   └── main.js           # JavaScript実装
-├── php/
-│   └── index.php         # PHP実装
-├── ruby/
-│   └── main.rb           # Ruby実装
-└── README.md             
+sudoku-generator
+├── cpp
+│   ├── main.cpp
+│   └── sudoku
+├── java
+│   ├── Main.class
+│   └── Main.java
+├── javascript
+│   └── main.js
+├── php
+│   └── index.php
+├── python
+│   └── main.py
+├── README.md
+├── ruby
+│   └── main.rb
+└── ShellScript
+    └── generate_layout.sh           
 ```
 
 # 使い方
@@ -36,5 +43,5 @@ sudoku-generator/
 |            | ./sudoku                          |
 | JavaScript | node main.js                      |
 | PHP        | php index.php                     |
-| Ruby       |                                   |
+| Ruby       | ruby main.rb                      |
 
