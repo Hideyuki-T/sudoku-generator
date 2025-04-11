@@ -69,3 +69,13 @@ function solve(board) {
     }
     return false;
 }
+
+//完全盤生成ユーティリティ
+function generateCompleteBoard() {
+    let board = createBoard();
+    if (solve(board)) {
+        return board;
+    } else {
+        throw new Error("盤生成ミスってしまったよ( ͒ •·̫• ͒)˘")
+    }
+}
