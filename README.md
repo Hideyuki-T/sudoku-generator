@@ -35,6 +35,12 @@ sudoku-generator
 ```
 
 # 使い方
+
+### リポジトリのクローン
+```
+git clone https://github.com/Hideyuki-T/sudoku-generator.git
+```
+### 各言語での実行方法
 | 言語         | 実行コマンド                            |
 |------------|-----------------------------------|
 | Python     | python3 main.py                   |
@@ -46,3 +52,8 @@ sudoku-generator
 | PHP        | php index.php                     |
 | Ruby       | ruby main.rb                      |
 
+
+## 今後の展望
+- ユーザーインターフェースの拡充
+- 他言語での実装
+- 
