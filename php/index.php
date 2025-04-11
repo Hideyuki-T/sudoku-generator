@@ -88,3 +88,20 @@ function generateCompleteBoard() {
         throw new Exception("盤面生成失敗なり。。ᐡ߹_߹ᐡ");
     }
 }
+
+//パズル盤生成
+function removeNumbers($board, $removals) {
+    $puzzleBoard = array_map(function($row) {
+        return array_slice($row, 0);
+    }, $board);
+    $count = $removals;
+    while ($count > 0) {
+        $row = rand(0, 8);
+        $col = rand(0, 8);
+        if ($puzzleBoard[$row][$col] !== 0) {
+            $puzzleBoard[$row][$col] = 0;
+            $count--;
+        }
+    }
+    return $puzzleBoard;
+}
