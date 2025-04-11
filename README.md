@@ -16,5 +16,17 @@ sudoku-generator/
 │   └── index.php         # PHP実装
 ├── ruby/
 │   └── main.rb           # Ruby実装
-└── README.md             # 優雅なる総合案内書
+└── README.md             
 ```
+
+# 使い方
+- pythonコマンド
+python3 main.py
+
+- javaコマンド
+java Main
+
+- cppコマンド
+g++ -std=c++11 -o sudoku main.cpp
+コンパイル成功後↓
+./sudoku
