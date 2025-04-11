@@ -1,6 +1,14 @@
 # 概要：
 6つの言語で挑戦！Python から Ruby まで、数独ジェネレーターを実装する！
 
+# 使用技術
+![python Badge](https://img.shields.io/badge/-Python-%230000.svg?style=flat&logo=python)
+![java Badge](https://img.shields.io/badge/-Java-%230000.svg?style=flat&logo=java)
+![C++ Badge](https://img.shields.io/badge/-C++-%230000.svg?style=flat&logo=C%2B%2B)
+![javascript Badge](https://img.shields.io/badge/-JavaScript-%230000.svg?style=flat&logo=javascript)
+![php Badge](https://img.shields.io/badge/-PHP-%230000.svg?style=flat&logo=php)
+![ruby Badge](https://img.shields.io/badge/-Ruby-%230000.svg?style=flat&logo=ruby)
+
 # ディレクトリ構成:
 ```
 sudoku-generator/
@@ -20,13 +28,13 @@ sudoku-generator/
 ```
 
 # 使い方
-- pythonコマンド
-python3 main.py
+| 言語         | 実行コマンド                            |
+|------------|-----------------------------------|
+| Python     | python main.py                    |
+| Java       | java Main                         |
+| C++        | g++ -std=c++11 -o sudoku main.cpp |
+|            | ./sudoku                          |
+| JavaScript | node main.js                      |
+| PHP        |                                   |
+| Ruby       |                                   |
 
-- javaコマンド
-java Main
-
-- cppコマンド
-g++ -std=c++11 -o sudoku main.cpp
-コンパイル成功後↓
-./sudoku
