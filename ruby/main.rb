@@ -54,3 +54,11 @@ def solve!(board)
     end
     false
 end
+
+
+//完全盤生成ユーティリティ
+def generate_complete_board
+    board = create_board
+    raise "盤の生成失敗です。。。"　unless solve!(board)
+    board
+end
