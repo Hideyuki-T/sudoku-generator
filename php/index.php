@@ -57,3 +57,24 @@ function isValid($board, $row, $col, $num) {
     }
     return true;
 }
+
+//盤面を完成させる。
+function solve(&$board) {
+    $row = 0;
+    $col = 0;
+    if (!findEmptyLocation($board, $row, $col)) {
+        return true;
+    }
+    $numbers = range(1, 9);
+    shuffle($numbers);
+    foreach ($numbers as $num) {
+        if (isValid($board, $row, $col, $num)) {
+            $board[$row][$col] = $num;
+            if (solve($board)) {
+                return true;
+            }
+            $board[$row][$col] = 0;
+        }
+    }
+    return false;
+}
