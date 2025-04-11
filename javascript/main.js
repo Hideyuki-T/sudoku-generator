@@ -10,3 +10,15 @@ function printBoard(board) {
         console.log(row.map(num => (num === 0 ? '.' : num)).join(' '));
     });
 }
+
+//空セル検出
+function findEmptyLocation(board) {
+    for (let i = 0; i < 9; i++) {
+        for (let j = 0; j < 9; j++) {
+            if (board[i][j] === 0) {
+                return [i, j];
+            }
+        }
+    }
+    return null;
+}
