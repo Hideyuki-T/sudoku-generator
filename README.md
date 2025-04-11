@@ -30,7 +30,7 @@ sudoku-generator/
 # 使い方
 | 言語         | 実行コマンド                            |
 |------------|-----------------------------------|
-| Python     | python main.py                    |
+| Python     | python3 main.py                   |
 | Java       | java Main                         |
 | C++        | g++ -std=c++11 -o sudoku main.cpp |
 |            | ./sudoku                          |
