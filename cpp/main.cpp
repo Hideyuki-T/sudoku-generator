@@ -5,6 +5,7 @@
 #include <random>
 #include <chrono>
 #include <stdexcept>
+#include <iomanip>
 
 using namespace std;
 
@@ -20,7 +21,10 @@ Board createBoard() {
 void printBoard(const Board &board) {
     for (const auto &row : board) {
         for (int num : row) {
-            cout << (num == 0 ? ". " : to_string(num) + ". ");
+            if (num == 0)
+                cout << setw(3) << ".";
+            else
+                cout << setw(3) << num;
         }
         cout << "\n";
     }
@@ -47,7 +51,7 @@ bool isValid(const Board &board, int row, int col, int num) {
     }
     //列
     for (int i = 0; i < 9; i++) {
-        if (board[col][i] == num)
+        if (board[i][col] == num)
             return false;
     }
     //ボックスチェック
