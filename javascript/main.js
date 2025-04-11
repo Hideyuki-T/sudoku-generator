@@ -79,3 +79,18 @@ function generateCompleteBoard() {
         throw new Error("盤生成ミスってしまったよ( ͒ •·̫• ͒)˘")
     }
 }
+
+//パズル化
+function removeNumbers(board, removals) {
+    let puzzleBoard = board.map(row => row.slice()); //ディープコピー
+    let count = removals;
+    while (count > 0) {
+        let row = Math.floor(Math.random() * 9);
+        let col = Math.floor(Math.random() * 9);
+        if (puzzleBoard[row][col] !== 0) {
+            puzzleBoard[row][col] = 0;
+            count--;
+        }
+    }
+    return puzzleBoard;
+}
