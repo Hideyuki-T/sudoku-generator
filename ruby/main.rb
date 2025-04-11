@@ -78,3 +78,17 @@ def remove_numbers(board, removals)
     puzzle_board
 end
 
+//結合テスト
+if __FILE__ == $0
+    begin
+        complete_board = generate_complete_board
+        puts "正解だよ！₍ᐡ⸝⸝•𖥦•⸝⸝ᐡ₎:"
+        print_board(complete_board)
+
+        puzzle_board = remove_numbers(complete_board, 40)
+        puts "\nさぁ！解いてみて！:"
+        print_board(puzzle_board)
+     rescue => e
+         puts "エラ〜: #{e.message}"
+     end
+end
