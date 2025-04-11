@@ -94,3 +94,20 @@ function removeNumbers(board, removals) {
     }
     return puzzleBoard;
 }
+
+//結合テスト
+function main() {
+    try {
+        let completeBoard = generateCompleteBoard();
+        console.log("完全盤だよ！₍ᐢ..ᐢ₎⊹");
+        printBoard(completeBoard);
+
+        let puzzleBoard = removeNumbers(completeBoard, 40);
+        console.log("\nさぁ解いてみて！");
+        printBoard(puzzleBoard);
+    } catch (error) {
+        console.error("エラ〜〜〜〜〜〜：", error.message);
+    }
+}
+
+main();
