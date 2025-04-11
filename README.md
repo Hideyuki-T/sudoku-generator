@@ -36,5 +36,5 @@ sudoku-generator/
 |            | ./sudoku                          |
 | JavaScript | node main.js                      |
 | PHP        | php index.php                     |
-| Ruby       |                                   |
+| Ruby       | ruby main.rb                      |
 
