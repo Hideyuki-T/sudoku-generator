@@ -62,3 +62,19 @@ def generate_complete_board
     raise "盤の生成失敗です。。。"　unless solve!(board)
     board
 end
+
+//パズル盤を作成
+def remove_numbers(board, removals)
+    puzzle_board = board.map(&:dup)
+    count = removals
+    while count > 0
+        row = rand(0...9)
+        col = rand(0...9)
+        if puzzle_board[row][col] != 0
+            puzzle_board[row][col] = 0
+            count -= 1
+        end
+    end
+    puzzle_board
+end
+
