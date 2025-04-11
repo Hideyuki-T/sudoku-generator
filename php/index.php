@@ -19,3 +19,17 @@ function printBoard($board) {
         }, $row)) . "\n";
     }
 }
+
+//空セルの座標を返す。
+function findEmptyLocation($board, $row, $col) {
+    for ($i = 0; $i < 9; $i++) {
+        for ($j = 0; $j < 9; $j++) {
+            if ($board[$i][$j] === 0) {
+                $row = $i;
+                $col = $j;
+                return true;
+            }
+        }
+    }
+    return false;
+}
