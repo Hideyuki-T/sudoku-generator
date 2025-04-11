@@ -46,3 +46,26 @@ function isValid(board, row, col, num) {
     }
     return true;
 }
+
+//完全盤生成
+function solve(board) {
+    let emptySpot = findEmptyLocation(board);
+    if (!emptySpot) {
+        return true;
+    }
+    let [row, col] = emptySpot;
+
+    let numbers = [...Array(9).keys()].map(x => x + 1);
+    numbers.sort(() => Math.random() - 0.5); //シャッフル
+
+    for (let num of numbers) {
+        if (isValid(board, rol, col, num)) {
+            board[row][col] = num;
+            if (solve(board)) {
+                return true;
+            }
+            board[row][col] = 0;
+        }
+    }
+    return false;
+}
