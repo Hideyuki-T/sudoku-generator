@@ -7,7 +7,7 @@ services:
     build: ./java
     container_name: java_app
     ports:
-      - "8080:8080"
+      - "8091:8080"
 
   javascript:
     build: ./javascript
@@ -19,16 +19,16 @@ services:
     build: ./php
     container_name: php_app
     ports:
-      - "8000:80"
+      - "8092:80"
 
   python:
     build: ./python
     container_name: python_app
     ports:
-      - "5000:5000"
+      - "5001:5000"
 
   ruby:
     build: ./ruby
     container_name: ruby_app
     ports:
-      - "3000:3000"
+      - "3001:3000"
