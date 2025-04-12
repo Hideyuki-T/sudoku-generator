@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-# 雛形として放置
-
 import random
 import copy
 
