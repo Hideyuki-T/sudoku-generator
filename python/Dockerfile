@@ -6,7 +6,7 @@ WORKDIR /app
 # RUN pip install --no-cache-dir -r requirements.txt
 
 # 簡易的に Flask をインストール
-RUN pip install --no-cache-dir Flask
+RUN pip install --no-cache-dir --default-timeout=100 Flask
 
 COPY . .
 

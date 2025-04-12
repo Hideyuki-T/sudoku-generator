@@ -2,28 +2,34 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>python数独ジェネレーター</title>
+    <title>数独ジェネレーター</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1>数独パズル</h1>
+<h1>数独ジェネレーター</h1>
 
-    <h2>パズル盤</h2>
-    <table>
+<h2>生成された完全盤</h2>
+<table>
+    {% for row in complete_board %}
+    <tr>
         {% for cell in row %}
-        <tr>
-            <td class="{{ 'empty' if cell == 0 else '' }}">{{ cell if cell != 0 else '' }}</td>
-            {% endfor %}
-        </tr>
-        {% endfor %}
-    </table>
-    <h2>正解盤</h2>
-    <table>
-        {% for row in complete_board %}
-        <tr>
         <td>{{ cell }}</td>
         {% endfor %}
-        </tr>
-    </table>
-    <script src="{{ url_for('static', filename='js/style.js') }}"></script>
+    </tr>
+    {% endfor %}
+</table>
+
+<h2>生成されたパズル盤</h2>
+<table>
+    {% for row in puzzle_board %}
+    <tr>
+        {% for cell in row %}
+        <td class="{{ 'empty' if cell == 0 else '' }}">{{ cell if cell != 0 else '' }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
+</html>
